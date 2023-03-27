@@ -22,8 +22,6 @@ export default function App() {
   }, [contacts]);
 
   const formSubmitHandler = contact => {
-    console.log(contact);
-    console.log(contact.name);
     const nameMatch = contacts.some(el => el.name === contact.name);
     if (nameMatch) {
       alert(`${contact.name} is already in contacts!`);
@@ -31,7 +29,7 @@ export default function App() {
     }
 
     setContacts(prevState => [...prevState, contact]);
-    console.log(contact);
+    // console.log(contact);
   };
 
   const handleDeleteContact = id => {
